@@ -1,5 +1,12 @@
+import Nav from "../components/Nav";
+
 function HomePage() {
-  return <div>HomePage</div>;
+    return (
+        <div>
+            <Nav />
+            <p>HomePage</p>
+        </div>
+    );
 }
 
 export default HomePage;
