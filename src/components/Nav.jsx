@@ -1,16 +1,17 @@
 import { NavLink } from "react-router";
 import Logo from "./Logo";
+import style from "../styles/nav.module.css";
 
 function Nav() {
     return (
-        <ul>
+        <nav className={style.nav}>
             <div>
                 <NavLink to="/">
                     <Logo />
                 </NavLink>
             </div>
 
-            <div>
+            <ul>
                 <li>
                     <NavLink to="/pricing">Pricing</NavLink>
                 </li>
@@ -20,8 +21,8 @@ function Nav() {
                 <li>
                     <NavLink to="/login">Login</NavLink>
                 </li>
-            </div>
-        </ul>
+            </ul>
+        </nav>
     );
 }
 

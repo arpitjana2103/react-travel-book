@@ -1,10 +1,10 @@
 import "./global.css";
-import LoginPage from "./pages/Login.page";
-import AppPage from "./pages/App.page";
-import PricingPage from "./pages/Pricing.page";
-import ProductPage from "./pages/Product.page";
-import HomePage from "./pages/Home.page";
-import ErrorPage from "./pages/Error.page";
+import LoginPage from "./pages/LoginPage";
+import AppPage from "./pages/AppPage";
+import PricingPage from "./pages/PricingPage";
+import ProductPage from "./pages/ProductPage";
+import HomePage from "./pages/HomePage";
+import ErrorPage from "./pages/ErrorPage";
 
 import {
     BrowserRouter,

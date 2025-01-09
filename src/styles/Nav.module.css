@@ -1,0 +1,29 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 6rem;
+}
+
+.nav ul {
+    display: flex;
+    gap: 4rem;
+    font-size: 1.7rem;
+    align-items: center;
+}
+
+.nav ul li:last-child {
+    background-color: var(--color-main-yellow);
+    padding: 1rem 1.8rem;
+    border-radius: var(--radius-sm);
+    color: #fff;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+.nav ul li:not(:last-child) :global(a.active) {
+    color: var(--color-main-yellow);
+}
