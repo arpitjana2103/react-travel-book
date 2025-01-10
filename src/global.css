@@ -2,7 +2,7 @@
 
 :root {
     --color-main-yellow: #fcc419;
-    --color-main-yellow2: #ffe066;
+    --color-main-yellow2: #fcc319e8;
 
     --color-white: #f4f4f5;
     --color-black: #343a40;
@@ -27,13 +27,15 @@ html {
 
 body {
     font-family: "Poppins", serif;
-    background-color: #e9ecef;
+    background-color: #f8f9fa;
     color: var(--color-black);
 }
 
 button,
 a {
     cursor: pointer;
+    border: none;
+    outline: none;
 }
 
 input,
@@ -49,7 +51,7 @@ textarea {
 
 input:focus {
     outline: none;
-    background-color: #fff;
+    background-color: #f8f9fa;
 }
 
 li,
@@ -60,4 +62,27 @@ a {
 
 .emoji {
     font-family: "Noto Color Emoji", serif;
+}
+
+.logoBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #f8f9fa;
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius-sm);
+    gap: 0.2rem;
+    width: fit-content;
+    margin-bottom: 1rem;
+    border: 1px solid #fcc419;
+}
+
+.logoBox span {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.logoBox img {
+    height: 4rem;
 }

@@ -14,16 +14,24 @@ function ProductPage() {
                     <img src="./product4.jpg" alt="loading.." />
                 </div>
                 <div className={style.description}>
-                    <div className={style.logoBox}>
-                        <Logo /> <span>TravelBook</span>
+                    <div className="logoBox">
+                        <img src="./logo.png" alt="logo" />
+                        <span>TravelBook</span>
                     </div>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Minus molestiae asperiores dolores eum quidem nobis
                         deserunt cupiditate voluptatum a id maxime architecto
                         veritatis veniam consequuntur earum, consequatur quis
-                        corporis. Laudantium. Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Minus molestiae asperiores
+                        corporis. Laudantium. Lorem sit amet consectetur
+                        adipisicing elit. Minus molestiae asperiores corporis.
+                        Laudantium. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Minus molestiae asperiores corporis.
+                        Laudantium. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Minus molestiae asperiores dolores eum
+                        quidem nobis deserunt cupiditate voluptatum a id maxime
+                        architecto veritatis veniam consequuntur earum,
+                        consequatur quis corporis. Minus molestiae asperiores
                         dolores eum quidem nobis deserunt cupiditate voluptatum
                         a id maxime architecto veritatis veniam consequuntur
                         earum, consequatur quis corporis.
