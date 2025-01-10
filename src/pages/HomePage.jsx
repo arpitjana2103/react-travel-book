@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import Nav from "../components/Nav";
 import style from "../styles/HomePage.module.css";
 import { GoArrowRight } from "react-icons/go";
+import Logo from "../components/Logo";
 
 function HomePage() {
     return (
@@ -9,6 +10,7 @@ function HomePage() {
             <Nav />
             <section className={style.hero}>
                 <div>
+                    <Logo />
                     <h1>
                         Keep Travelling <br /> We are here to Track you
                     </h1>

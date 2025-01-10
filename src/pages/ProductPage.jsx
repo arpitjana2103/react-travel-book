@@ -1,10 +1,35 @@
+import Logo from "../components/Logo";
 import Nav from "../components/Nav";
+import style from "../styles/productPage.module.css";
 
 function ProductPage() {
     return (
         <div>
             <Nav />
-            <p>ProductPage</p>
+            <main className={style.product}>
+                <div className={style.imageBox}>
+                    <img src="./product1.jpg" alt="loading.." />
+                    <img src="./product2.jpg" alt="loading.." />
+                    <img src="./product3.jpg" alt="loading.." />
+                    <img src="./product4.jpg" alt="loading.." />
+                </div>
+                <div className={style.description}>
+                    <div className={style.logoBox}>
+                        <Logo /> <span>TravelBook</span>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Minus molestiae asperiores dolores eum quidem nobis
+                        deserunt cupiditate voluptatum a id maxime architecto
+                        veritatis veniam consequuntur earum, consequatur quis
+                        corporis. Laudantium. Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Minus molestiae asperiores
+                        dolores eum quidem nobis deserunt cupiditate voluptatum
+                        a id maxime architecto veritatis veniam consequuntur
+                        earum, consequatur quis corporis.
+                    </p>
+                </div>
+            </main>
         </div>
     );
 }
