@@ -12,16 +12,19 @@
 }
 
 .loginPage .loginSection > div {
-    display: flex;
     width: 70%;
+    display: flex;
     overflow: hidden;
     border-radius: 0.5rem;
     margin: 0 auto;
 }
 
-.loginImage {
+.imageContainer {
     width: 100%;
-    object-fit: cover;
+}
+
+.imageContainer img {
+    width: 100%;
 }
 
 .formContainer {

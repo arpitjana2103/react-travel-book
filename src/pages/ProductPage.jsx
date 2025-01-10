@@ -1,4 +1,3 @@
-import Logo from "../components/Logo";
 import Nav from "../components/Nav";
 import style from "../styles/productPage.module.css";
 
