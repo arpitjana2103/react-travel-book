@@ -5,6 +5,7 @@ import CityList from "./CityList";
 import Footer from "./Footer";
 import City from "./City";
 import AddCityForm from "./AddCityForm";
+import CountryList from "./CountryList";
 
 function SideBar() {
     return (
@@ -14,6 +15,7 @@ function SideBar() {
             {/* <CityList /> */}
             {/* <City /> */}
             {/* <AddCityForm /> */}
+            <CountryList />
             <Footer />
         </div>
     );

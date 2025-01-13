@@ -14,7 +14,7 @@ PAGES :
 
         ( Authenticated Users )
 
-            6. "/app"            --> ( redirect to "/app/cities" )
+            6. "/app"            --> 
             7. "/app/cities"     --> a. Load City List,    b. Load Map
             8. "/app/countries"  --> a. Load Country List, b. Load Map
 

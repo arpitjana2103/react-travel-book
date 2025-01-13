@@ -16,7 +16,7 @@
 
 .addCityForm input,
 .addCityForm textarea {
-    border: 1px solid var(--color-main-yellow);
+    border: var(--yellow-border);
 }
 
 .buttonBox {
