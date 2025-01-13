@@ -63,3 +63,7 @@ PAGES :
 
 2. Map
 
+
+/app/cities
+/login 
+/
