@@ -1,5 +1,6 @@
 import CityItem from "./CityItem";
 import styles from "../styles/cityList.module.css";
+import { useEffect } from "react";
 
 const tempCities = [
     {
@@ -76,10 +77,17 @@ const tempCities = [
     },
 ];
 
-function CityList() {
+function CityList({ loadCities, cities }) {
+    useEffect(
+        function () {
+            loadCities();
+        },
+        [loadCities]
+    );
+
     return (
         <ul className={styles.cityList}>
-            {tempCities.map(function (city) {
+            {cities.map(function (city) {
                 return <CityItem city={city} key={city.id} />;
             })}
         </ul>

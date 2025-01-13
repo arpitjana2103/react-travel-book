@@ -1,12 +1,18 @@
-const baseURL = `http://localhost:3000/`;
+const baseURL = `http://localhost:3000`;
 
 export async function getCities() {
-    const response = await fetch(`${baseURL}/cities`, {
-        method: "GET",
-    });
-    const data = await response.json();
-    return data;
+    try {
+        const response = await fetch(`${baseURL}/cities`, {
+            method: "GET",
+        });
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.log(error);
+    }
 }
+
+await getCities();
 
 export async function getCity(id) {
     const response = await fetch(`${baseURL}/cities/${id}`, {

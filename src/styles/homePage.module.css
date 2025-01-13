@@ -65,5 +65,6 @@
 }
 
 .cta:hover svg {
+    transition: transform 0.2s;
     transform: translateX(0.3rem);
 }

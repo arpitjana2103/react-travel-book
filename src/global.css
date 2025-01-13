@@ -25,7 +25,6 @@ html {
     box-sizing: border-box;
     font-family: inherit;
     font-size: inherit;
-    transition: all 0.2s;
     color: inherit;
     scrollbar-width: thin;
 }
