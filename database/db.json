@@ -13,18 +13,6 @@
       "id": "1"
     },
     {
-      "cityName": "Boalmari",
-      "country": "Bangladesh",
-      "emoji": "🇧🇩",
-      "date": "2024-10-26T04:53:34.170Z",
-      "notes": "This is a note about Boalmari",
-      "position": {
-        "lat": "23.36242859340884",
-        "lng": "89.747314453125"
-      },
-      "id": "2"
-    },
-    {
       "cityName": "Athang Gewog",
       "country": "Bhutan",
       "emoji": "🇧🇹",
@@ -59,18 +47,6 @@
         "lng": "81.63459777832033"
       },
       "id": "5"
-    },
-    {
-      "cityName": "Jeffrey City",
-      "country": "United States of America (the)",
-      "emoji": "🇺🇸",
-      "date": "2025-01-11T05:46:51.036Z",
-      "notes": "This is all about Jeffrey City",
-      "position": {
-        "lat": "42.85456125392396",
-        "lng": "-107.8490063777907"
-      },
-      "id": "6"
     }
   ]
 }
