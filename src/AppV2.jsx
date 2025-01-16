@@ -15,10 +15,9 @@ import {
 } from "react-router";
 import CityList from "./components/CityList";
 import CountryList from "./components/CountryList";
-import { useEffect, useReducer, useState } from "react";
-import { getCities } from "./services/apiCities";
+import { CitiesProvider } from "./contexts/citiesContext";
 
-const AppRoutesV1 = function ({ loadCities, cities }) {
+const AppRoutesV1 = function () {
     return (
         <BrowserRouter>
             <Routes>
@@ -26,14 +25,16 @@ const AppRoutesV1 = function ({ loadCities, cities }) {
                 <Route path="product" element={<ProductPage />} />
                 <Route path="login" element={<LoginPage />} />
 
-                <Route path="app" element={<AppPage />}>
+                <Route
+                    path="app"
+                    element={
+                        <CitiesProvider>
+                            <AppPage />
+                        </CitiesProvider>
+                    }
+                >
                     <Route index element={<Navigate replace to="cities" />} />
-                    <Route
-                        path="cities"
-                        element={
-                            <CityList loadCities={loadCities} cities={cities} />
-                        }
-                    />
+                    <Route path="cities" element={<CityList />} />
                     <Route path="countries" element={<CountryList />} />
                 </Route>
 
@@ -49,7 +50,11 @@ const AppRoutesV2 = createBrowserRouter([
     { path: "/login", element: <LoginPage /> },
     {
         path: "/app",
-        element: <AppPage />,
+        element: (
+            <CitiesProvider>
+                <AppPage />
+            </CitiesProvider>
+        ),
         children: [
             { index: true, element: <Navigate replace to="cities" /> },
             { path: "cities", element: <CityList /> },
@@ -63,42 +68,9 @@ const AppRoutesV2 = createBrowserRouter([
 //////////////////// USE REDUCER //////////////////////////
 ///////////////////////////////////////////////////////////
 
-const initialState = {
-    cities: [],
-    loading: false,
-    error: null,
-};
-
-function reducer(currState, action) {
-    switch (action.type) {
-        case "loading":
-            return { ...currState, isLoading: true };
-
-        case "cities/loaded":
-            return { ...currState, isLoading: false, cities: action.payload };
-
-        case "rejected":
-            return { ...currState, isLoading: false, error: action.payload };
-    }
-}
-
 function App() {
-    const [state, dispatch] = useReducer(reducer, initialState);
-    const { cities, loading, error } = state;
-
-    // handeller function
-    async function loadCities() {
-        try {
-            dispatch({ type: "loading" });
-            const citiesData = await getCities();
-            dispatch({ type: "cities/loaded", payload: citiesData });
-        } catch (error) {
-            dispatch({ type: "rejected", payload: error.message });
-        }
-    }
-
-    return <AppRoutesV1 loadCities={loadCities} cities={cities} />;
-    // return <RouterProvider router={AppRoutesV2} />;
+    // return <AppRoutesV1 />;
+    return <RouterProvider router={AppRoutesV2} />;
 }
 
 export default App;
