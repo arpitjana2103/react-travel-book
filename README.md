@@ -1,97 +1,112 @@
-//////////////////////////////////////////////
-///////////// PROJECT REQUIREMENTS ///////////
-//////////////////////////////////////////////
+# Project Requirements
 
-PAGES :
+## Pages
 
-        ( All users )
+### For All Users:
 
-            1. "/"               --> Home Page
-            2. "/home"           --> Home Page
-            3. "/pricing"        --> Pricing Page
-            4. "/product"        --> Product Page
-            5. "/login"          --> Login Page
+1. **`/`** - Home Page
+2. **`/home`** - Home Page
+3. **`/pricing`** - Pricing Page
+4. **`/product`** - Product Page
+5. **`/login`** - Login Page
 
-        ( Authenticated Users )
+### For Authenticated Users:
 
-            6. "/app"            -->
-            7. "/app/cities"     --> a. Load City List,    b. Load Map
-            8. "/app/countries"  --> a. Load Country List, b. Load Map
+6. **`/app`** - Main App Page
+7. **`/app/cities`** -
+    - Load City List
+    - Load Map
+8. **`/app/countries`** -
+    - Load Country List
+    - Load Map
 
-//// HOME PAGE
+---
 
-1. Nav
-2. Hero
-   2.1. Description
-   2.2. CTA
+## Page Details
 
-//// PRICING PAGE
+### Home Page
 
-1.  Nav
-2.  PricingDetails
+1. **Nav**
+2. **Hero Section**
+    - Description
+    - Call-to-Action (CTA)
 
-//// PRODUCT PAGE
+### Pricing Page
 
-1.  Nav
-2.  ProductDetails
+1. **Nav**
+2. **Pricing Details**
 
-//// LOGIN PAGE
+### Product Page
 
-1. Nav
-2. Login Form
+1. **Nav**
+2. **Product Details**
 
-//// APP PAGE
+### Login Page
 
-AppPage (cities, isLoading, error)
+1. **Nav**
+2. **Login Form**
 
-    SideBar
+### App Page
 
-        1.1 CityList
-            1.1.1 City
-            1.1.1 City
-            1.1.1 City
-            1.1.1 City
-            1.1.1 City
+**AppPage (cities, isLoading, error)**
 
-        1.2 CountryList
-        1.3 CityDetails
-        1.4 AddCityForm
+1. **SideBar**
 
-2. Map
+    - **CityList**
+        - City
+        - City
+        - City
+        - City
+        - City
+    - **CountryList**
+    - **CityDetails**
+    - **AddCityForm**
 
-\*\* Component Tree / React Element Tree / (Virtual DOM)
+2. **Map**
 
--   App
-    -   HomePage
-    -   ProductPage
-    -   LoginPage
-    -   CityProvider (cities)
-        -   AppPage
-            -   SideBar
-                -   AppNav
-                -   CityList
-                    -   CityItem
-                    -   CityItem
-                    -   CityItem
-                    -   CityItem
-                -   CountryList
-                -   AddCityForm
-                -   City
-            -   Map
+---
 
-/// useReducer Plan
+## Component Tree / React Element Tree / Virtual DOM
 
---> action 1 : "cities/load"
---> action 2 : "city/load"
---> action 3 : "city/delete"
---> action 4 : "city/update"
---> action 5 : "city/create"
---> action 6 : "loading"
---> action 7 : "rejected"
+-   **App**
+    -   **HomePage**
+    -   **ProductPage**
+    -   **LoginPage**
+    -   **CityProvider** (cities)
+        -   **AppPage**
+            -   **SideBar**
+                -   **AppNav**
+                -   **CityList**
+                    -   **CityItem**
+                    -   **CityItem**
+                    -   **CityItem**
+                    -   **CityItem**
+                -   **CountryList**
+                -   **AddCityForm**
+                -   **CityDetails**
+            -   **Map**
 
+---
+
+## useReducer Plan
+
+### Actions:
+
+1. **`cities/load`**
+2. **`city/load`**
+3. **`city/delete`**
+4. **`city/update`**
+5. **`city/create`**
+6. **`loading`**
+7. **`rejected`**
+
+### State:
+
+```javascript
 state = {
-cities: [],
-city: null,
-loading: false,
-error: null
-}
+    cities: [],
+    city: null,
+    loading: false,
+    error: null,
+};
+```
