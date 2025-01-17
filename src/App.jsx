@@ -16,6 +16,7 @@ import {
 import CityList from "./components/CityList";
 import CountryList from "./components/CountryList";
 import { CitiesProvider } from "./contexts/citiesContext";
+import AddCityForm from "./components/AddCityForm";
 
 const AppRoutesV1 = function () {
     return (
@@ -58,7 +59,8 @@ const AppRoutesV2 = createBrowserRouter([
         children: [
             { index: true, element: <Navigate replace to="cities" /> },
             { path: "cities", element: <CityList /> },
-            { path: "counties", element: <CountryList /> },
+            { path: "countries", element: <CountryList /> },
+            { path: "form", element: <AddCityForm /> },
         ],
     },
     { path: "*", element: <ErrorPage /> },
