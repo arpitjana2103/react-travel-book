@@ -12,6 +12,10 @@ function SideBar() {
 
             <Outlet />
 
+            {/* /app/cities --> <Outlet> == <CityList /> */}
+            {/* /app/countries --> <Outlet> == <CountryList /> */}
+            {/* /app/form --> <Outlet> == <AddCityForm /> */}
+
             <Footer />
         </div>
     );

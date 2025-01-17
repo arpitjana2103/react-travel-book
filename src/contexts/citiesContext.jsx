@@ -90,7 +90,7 @@ const CitiesProvider = function ({ children }) {
     useEffect(function () {
         async function loadCities() {
             try {
-                dispatch({ type: "loading" });
+                startLoading();
                 const data = await getCities();
                 dispatch({ type: "cities/load", payload: data });
             } catch (error) {
@@ -103,7 +103,7 @@ const CitiesProvider = function ({ children }) {
 
     async function handleLoadCity(id) {
         try {
-            dispatch({ type: "loading" });
+            startLoading();
             const data = await getCity(id);
             dispatch({ type: "city/load", payload: data });
         } catch (error) {
@@ -113,7 +113,7 @@ const CitiesProvider = function ({ children }) {
 
     async function handleAddCity(newCity) {
         try {
-            dispatch({ type: "loading" });
+            startLoading();
             const data = await createCity(newCity);
             dispatch({ type: "city/create", payload: data });
         } catch (error) {
@@ -123,7 +123,7 @@ const CitiesProvider = function ({ children }) {
 
     async function handleRemoveCity(id) {
         try {
-            dispatch({ type: "loading" });
+            startLoading();
             await deleteCity(id);
             dispatch({ type: "city/delete", payload: id });
         } catch (error) {
@@ -133,7 +133,7 @@ const CitiesProvider = function ({ children }) {
 
     async function handleEditCity(id, updatedCity) {
         try {
-            dispatch({ type: "loading" });
+            startLoading();
             const data = await updateCity(id, updatedCity);
             dispatch({
                 type: "city/update",
@@ -142,6 +142,10 @@ const CitiesProvider = function ({ children }) {
         } catch (error) {
             dispatch({ type: "error", payload: error.message });
         }
+    }
+
+    function startLoading() {
+        dispatch({ type: "loading" });
     }
 
     const valuesObj = {
@@ -153,6 +157,7 @@ const CitiesProvider = function ({ children }) {
         handleAddCity: handleAddCity,
         handleRemoveCity: handleRemoveCity,
         handleEditCity: handleEditCity,
+        startLoading: startLoading,
     };
 
     return (
