@@ -239,6 +239,18 @@
         "lng": "28.978359"
       },
       "id": "20"
+    },
+    {
+      "cityName": "Gannan Zangzu Zizhizhou",
+      "country": "China",
+      "emoji": "🇨🇳",
+      "date": "2025-01-18T10:14:12.394Z",
+      "notes": "A note about Gannan Zangzu Zizhizhou",
+      "position": {
+        "lat": "34.47443328617457",
+        "lng": "103.36212158203125"
+      },
+      "id": "Csfyd5e"
     }
   ]
 }
