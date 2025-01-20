@@ -3,6 +3,8 @@
     font-size: 1.25rem;
     margin-top: 2rem;
     border-radius: var(--radius-sm);
+    height: 100%;
+    overflow-y: scroll;
 }
 
 .addCityForm form > div {
@@ -18,6 +20,18 @@
 .addCityForm input,
 .addCityForm textarea {
     border: var(--yellow-border);
+}
+
+.emojiInputBox {
+    position: relative;
+}
+
+.emojiInputBox span {
+    position: absolute;
+    font-size: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1rem;
 }
 
 .deactivate {

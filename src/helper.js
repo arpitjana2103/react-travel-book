@@ -1,4 +1,5 @@
 export const formatDate = function (date) {
+    if (!date) return "";
     return new Intl.DateTimeFormat("en", {
         day: "numeric",
         month: "long",
