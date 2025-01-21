@@ -73,7 +73,10 @@ export function AuthProvider({ children }) {
     }
 
     function handleLogout() {
-        dispatch({ type: "user/logout" });
+        dispatch({ type: "loading" });
+        setTimeout(function () {
+            dispatch({ type: "user/logout" });
+        }, 2000);
     }
 
     return (

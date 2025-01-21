@@ -2,7 +2,8 @@
 
 :root {
     --color-main-yellow: #fcc419;
-    --color-main-yellow-faded: #fcc31930;
+    --color-main-yellow-light: #ffd43b;
+    --color-main-yellow-faded: #fff9db;
 
     --color-white: #f4f4f5;
     --color-black: #343a40;

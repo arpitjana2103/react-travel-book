@@ -1,5 +1,5 @@
 import Nav from "../components/Nav";
-import style from "../styles/login.module.css";
+import style from "../styles/loginPage.module.css";
 import LogoBox from "../components/LogoBox";
 import LoginForm from "../components/LoginForm";
 import SignUpForm from "../components/SignUpForm";
@@ -28,7 +28,10 @@ function LoginPage() {
                         {showLogin && (
                             <>
                                 <LoginForm />
-                                <button onClick={toggleLogin}>
+                                <button
+                                    className={style.toggleForm}
+                                    onClick={toggleLogin}
+                                >
                                     Do not have account ? sign up
                                 </button>
                             </>
@@ -37,7 +40,10 @@ function LoginPage() {
                         {!showLogin && (
                             <>
                                 <SignUpForm />
-                                <button onClick={toggleLogin}>
+                                <button
+                                    className={style.toggleForm}
+                                    onClick={toggleLogin}
+                                >
                                     Already have account ? login
                                 </button>
                             </>

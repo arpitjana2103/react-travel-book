@@ -5,7 +5,7 @@ import { useUser } from "../contexts/userContext";
 import FormError from "./FormError";
 
 function LoginForm() {
-    const [email, setEmail] = useState("bablu@gmail.com");
+    const [email, setEmail] = useState("arpitjana@gmail.com");
     const [password, setPassword] = useState("Password123");
 
     const { handleLogin, loading, error } = useUser();
@@ -55,7 +55,7 @@ function LoginForm() {
                     />
                 </div>
                 {!passwordError && <FormError txt={error.message} />}
-                <button>{loading ? "Logging in" : "Login"}</button>
+                <button>{loading ? "Logging in..." : "Login"}</button>
             </form>
         </>
     );
