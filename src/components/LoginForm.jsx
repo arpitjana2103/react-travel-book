@@ -16,9 +16,9 @@ function LoginForm() {
     const handleEmailChange = (e) => setEmail(e.target.value);
     const handlePasswordChange = (e) => setPassword(e.target.value);
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
-        handleLogin({ emailAddress: email, password: password }, () =>
+        await handleLogin({ emailAddress: email, password: password }, () =>
             navigate("/app")
         );
     }

@@ -9,7 +9,6 @@ export async function getUserByEmail(emailAddress) {
 }
 
 export async function loginUser(emailAddress, password) {
-    console.log(emailAddress);
     const user = await getUserByEmail(emailAddress);
     if (!user)
         throw new Error("No user found with this email !", {
