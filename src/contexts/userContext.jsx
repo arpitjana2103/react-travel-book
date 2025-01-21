@@ -5,7 +5,7 @@ const UserContext = createContext();
 
 const initialState = {
     user: null,
-    error: null,
+    error: {},
     loading: false,
 };
 
@@ -21,7 +21,14 @@ const reducer = function (state, action) {
             return { ...initialState };
 
         case "error":
-            return { ...state, loading: false, error: action.payload };
+            return {
+                ...state,
+                loading: false,
+                error: {
+                    type: action.payload.type,
+                    message: action.payload.message,
+                },
+            };
 
         case "loading":
             return { ...state, loading: true };
@@ -37,23 +44,31 @@ export function AuthProvider({ children }) {
     const [state, dispatch] = useReducer(reducer, initialState);
     const { user, error, loading } = state;
 
-    async function handleSignUp(newUser) {
+    async function handleSignUp(newUser, action = () => {}) {
         try {
             dispatch({ type: "loading" });
             const user = await singUpUser(newUser);
             dispatch({ type: "user/signup", payload: user });
+            action();
         } catch (error) {
-            dispatch({ type: "error", payload: error.message });
+            dispatch({
+                type: "error",
+                payload: { type: error.cause, message: error.message },
+            });
         }
     }
 
-    async function handleLogin(emailAddress, password) {
+    async function handleLogin({ emailAddress, password }, action = () => {}) {
         try {
             dispatch({ type: "loading" });
             const user = await loginUser(emailAddress, password);
             dispatch({ type: "user/login", payload: user });
+            action();
         } catch (error) {
-            dispatch({ type: "error", payload: error.message });
+            dispatch({
+                type: "error",
+                payload: { type: error.cause, message: error.message },
+            });
         }
     }
 

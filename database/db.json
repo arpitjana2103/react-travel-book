@@ -257,20 +257,20 @@
         {
             "name": "Arpit Jana",
             "email": "arpitjana@gmail.com",
-            "password": "password123",
+            "password": "Password123",
             "id": 1
         },
         {
             "name": "Bablu",
             "email": "bablu@gmail.com",
-            "password": "password123",
-            "id": 2
+            "password": "Password123",
+            "id": 1
         },
         {
             "name": "shubham",
             "email": "shubham@gmail.com",
-            "password": "password123",
-            "id": 3
+            "password": "Password123",
+            "id": 2
         }
     ]
 }
