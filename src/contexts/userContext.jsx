@@ -4,11 +4,7 @@ import { loginUser, singUpUser } from "../services/apiUsers";
 const UserContext = createContext();
 
 const initialState = {
-    user: {
-        name: "Arpit Jana",
-        email: "arpitjana@gmail.com",
-        password: "Password123",
-    },
+    user: null,
     error: {},
     loading: false,
 };
