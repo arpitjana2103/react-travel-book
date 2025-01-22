@@ -9,6 +9,7 @@ import { useCities } from "../contexts/citiesContext";
 import { useNavigate } from "react-router";
 
 const BASE_URL = `https://api.bigdatacloud.net/data/reverse-geocode-client`;
+//                        api.bigdatacloud.net/data/reverse-geocode-client
 
 // It's a good candidate for useReducer();
 
@@ -16,7 +17,7 @@ const BASE_URL = `https://api.bigdatacloud.net/data/reverse-geocode-client`;
 // cityDetaisl/load
 // reject
 
-function AddCityForm() {
+https: function AddCityForm() {
     const { handleAddCity, loading: apiLoading, error: apiError } = useCities();
     const [lat, lng] = useQueryParams("lat", "lng");
     const [isLoading, setIsLoading] = useState(false);
@@ -42,6 +43,8 @@ function AddCityForm() {
                     const respose = await fetch(url);
                     const data = await respose.json();
                     const cityName = data.city;
+
+                    setCityNotFound(false);
 
                     if (!cityName) {
                         setCityNotFound(true);
