@@ -17,7 +17,7 @@ const BASE_URL = `https://api.bigdatacloud.net/data/reverse-geocode-client`;
 // cityDetaisl/load
 // reject
 
-https: function AddCityForm() {
+function AddCityForm() {
     const { handleAddCity, loading: apiLoading, error: apiError } = useCities();
     const [lat, lng] = useQueryParams("lat", "lng");
     const [isLoading, setIsLoading] = useState(false);
