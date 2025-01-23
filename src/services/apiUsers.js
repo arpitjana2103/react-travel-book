@@ -1,6 +1,6 @@
 import { validPassword } from "../helper";
 
-const baseURL = `http://localhost:3000`;
+const baseURL = `https://json-server-blz3.onrender.com`;
 
 export async function getUserByEmail(emailAddress) {
     const response = await fetch(`${baseURL}/users?email=${emailAddress}`);

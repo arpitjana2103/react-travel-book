@@ -1,4 +1,4 @@
-const baseURL = `http://localhost:3000`;
+const baseURL = `https://json-server-blz3.onrender.com`;
 
 export async function getCities() {
     try {
